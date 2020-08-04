@@ -14,13 +14,13 @@ public class Direction {
     public Direction turnRight() {
         switch (direction) {
             case DIR_NORTH:
-                return new Direction(DIR_EAST);
+                return new DirectionNorth().turnRight();
             case DIR_SOUTH:
-                return new Direction(DIR_WEST);
+                return new DirectionSouth().turnRight();
             case DIR_EAST:
-                return new Direction(DIR_NORTH);
+                return new DirectionEast().turnRight();
             case DIR_WEST:
-                return new Direction(DIR_SOUTH);
+                return new DirectionWest().turnRight();
             default:
                 throw new IllegalArgumentException();
         }
@@ -29,13 +29,13 @@ public class Direction {
     public Direction turnLeft() {
         switch (direction) {
             case DIR_NORTH:
-                return new Direction(DIR_WEST);
+                return new DirectionNorth().turnLeft();
             case DIR_SOUTH:
-                return new Direction(DIR_EAST);
+                return new DirectionSouth().turnLeft();
             case DIR_EAST:
-                return new Direction(DIR_NORTH);
+                return new DirectionEast().turnLeft();
             case DIR_WEST:
-                return new Direction(DIR_SOUTH);
+                return new DirectionWest().turnLeft();
             default:
                 throw new IllegalArgumentException();
         }
